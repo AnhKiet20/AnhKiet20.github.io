@@ -30,10 +30,35 @@ margin:auto;
 max-width:1200px;
 }
 
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:30px 0;
+}
+
+.logo{
+font-weight:700;
+font-size:20px;
+}
+
+.menu a{
+margin-left:25px;
+text-decoration:none;
+color:#9ca3af;
+font-size:14px;
+}
+
+.menu a:hover{
+color:white;
+}
+
 /* HERO */
 
 .hero{
-padding:120px 0;
+padding:80px 0;
 }
 
 .hero small{
@@ -69,7 +94,7 @@ color:white;
 }
 
 .btn-light{
-border:1px solid #ddd;
+border:1px solid #444;
 color:white;
 }
 
@@ -101,7 +126,7 @@ text-align:center;
 }
 
 .stat h3{
-font-size:26px;
+font-size:28px;
 }
 
 /* PROJECTS */
@@ -135,6 +160,10 @@ transform:translateY(-8px);
 margin-bottom:10px;
 }
 
+.card p{
+color:#9ca3af;
+}
+
 .tags{
 margin-top:15px;
 }
@@ -146,6 +175,14 @@ background:#1f2937;
 border-radius:20px;
 font-size:12px;
 margin:3px;
+}
+
+.github-btn{
+display:inline-block;
+margin-top:15px;
+color:#60a5fa;
+text-decoration:none;
+font-size:14px;
 }
 
 /* SKILLS */
@@ -171,12 +208,50 @@ font-weight:500;
 /* CONTACT */
 
 .contact{
-padding:80px 0;
+padding:100px 0;
 text-align:center;
 }
 
+.contact h2{
+margin-bottom:30px;
+}
+
+.contact-box{
+background:#111827;
+padding:40px;
+border-radius:15px;
+max-width:500px;
+margin:auto;
+}
+
+.contact p{
+margin:10px 0;
+color:#9ca3af;
+}
+
+.contact-links{
+margin-top:25px;
+}
+
+.contact-links a{
+display:inline-block;
+margin:10px;
+padding:10px 20px;
+background:#1f2937;
+border-radius:6px;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.contact-links a:hover{
+background:#2563eb;
+}
+
+/* FOOTER */
+
 footer{
-padding:30px;
+padding:40px;
 text-align:center;
 color:#9ca3af;
 }
@@ -205,17 +280,33 @@ grid-template-columns:1fr;
 
 <div class="container">
 
+<!-- NAV -->
+
+<nav>
+
+<div class="logo">Mai Anh Kiet</div>
+
+<div class="menu">
+<a href="#about">About Me</a>
+<a href="#projects">Selected Projects</a>
+<a href="#skills">Expertise</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+
 <!-- HERO -->
 
 <section class="hero">
 
-<small>XIN CHÀO — WELCOME</small>
+<small>WELCOME</small>
 
 <h1>I'm Mai Anh Kiet.</h1>
 
 <p>
-Software Engineering student at Sai Gon University.
-Building clean and practical backend systems using modern technologies.
+Software Engineering student at Sai Gon University building backend systems
+with Java, Spring Boot and modern web technologies.
 </p>
 
 <div class="buttons">
@@ -229,30 +320,29 @@ Building clean and practical backend systems using modern technologies.
 
 <!-- ABOUT -->
 
-<section class="about">
+<section class="about" id="about">
 
 <div>
 
 <h2>About Me</h2>
 
 <p>
-Tôi là sinh viên ngành <b>Kỹ thuật Phần mềm</b> tại 
-<b>Đại học Sài Gòn (SGU), Thành phố Hồ Chí Minh</b>.
+I am a Software Engineering student at 
+<strong>Sai Gon University (SGU), Ho Chi Minh City.</strong>
 </p>
 
 <br>
 
 <p>
-Hiện tôi đang tìm kiếm cơ hội <b>Software Engineer Internship</b> để
-phát triển kỹ năng lập trình và tham gia vào các dự án phần mềm thực tế.
+Currently seeking a <strong>Software Engineer Internship</strong>
+to gain hands-on experience and contribute to real-world software projects.
 </p>
 
 <br>
 
 <p>
-Tôi tập trung vào phát triển <b>Backend với Java và Spring Boot</b>,
-kết hợp với các hệ quản trị cơ sở dữ liệu để xây dựng hệ thống web
-ổn định và dễ mở rộng.
+My main focus is backend development using
+<strong>Java, Spring Boot and database systems</strong>.
 </p>
 
 </div>
@@ -266,7 +356,7 @@ kết hợp với các hệ quản trị cơ sở dữ liệu để xây dựng 
 </div>
 
 <div class="stat">
-<h3>7+</h3>
+<h3>8+</h3>
 <p>Projects Completed</p>
 </div>
 
@@ -277,7 +367,7 @@ kết hợp với các hệ quản trị cơ sở dữ liệu để xây dựng 
 
 <div class="stat">
 <h3>HCM</h3>
-<p>Ho Chi Minh City</p>
+<p>Location</p>
 </div>
 
 </div>
@@ -294,22 +384,24 @@ kết hợp với các hệ quản trị cơ sở dữ liệu để xây dựng 
 
 <div class="project-grid">
 
-
 <div class="card">
 
 <h3>Education Management System</h3>
 
 <p>
-Spring Boot system for managing curriculum, teaching plans
-and course information for universities.
+Spring Boot web application for managing curriculum,
+teaching plans and academic programs.
 </p>
 
 <div class="tags">
 <span class="tag">Java</span>
 <span class="tag">Spring Boot</span>
 <span class="tag">MySQL</span>
-<span class="tag">REST API</span>
 </div>
+
+<a class="github-btn"
+href="https://github.com/Quin19FD/QuanLyDaoTao"
+target="_blank">View on GitHub →</a>
 
 </div>
 
@@ -320,15 +412,18 @@ and course information for universities.
 
 <p>
 Web application allowing customers to book spa services
-and administrators manage appointments and schedules.
+and administrators manage schedules.
 </p>
 
 <div class="tags">
-<span class="tag">Java</span>
 <span class="tag">Spring Boot</span>
 <span class="tag">JavaScript</span>
 <span class="tag">SQL Server</span>
 </div>
+
+<a class="github-btn"
+href="https://github.com/NghiaHa204/UkiyoClone"
+target="_blank">View on GitHub →</a>
 
 </div>
 
@@ -338,8 +433,8 @@ and administrators manage appointments and schedules.
 <h3>Milk Tea Ordering System</h3>
 
 <p>
-Desktop management system handling orders,
-inventory and reporting for a milk tea shop.
+Desktop system for managing orders,
+inventory and reporting in a milk tea shop.
 </p>
 
 <div class="tags">
@@ -347,6 +442,10 @@ inventory and reporting for a milk tea shop.
 <span class="tag">Swing</span>
 <span class="tag">MySQL</span>
 </div>
+
+<a class="github-btn"
+href="https://github.com/magiauy/Milktea"
+target="_blank">View on GitHub →</a>
 
 </div>
 
@@ -359,7 +458,7 @@ inventory and reporting for a milk tea shop.
 
 <!-- SKILLS -->
 
-<section class="skills">
+<section class="skills" id="skills">
 
 <h2>Expertise</h2>
 
@@ -369,7 +468,6 @@ inventory and reporting for a milk tea shop.
 <div class="skill">Spring Boot</div>
 <div class="skill">Hibernate</div>
 <div class="skill">REST API</div>
-<div class="skill">SQL</div>
 <div class="skill">MySQL</div>
 <div class="skill">PostgreSQL</div>
 <div class="skill">MongoDB</div>
@@ -377,6 +475,7 @@ inventory and reporting for a milk tea shop.
 <div class="skill">HTML/CSS</div>
 <div class="skill">Git</div>
 <div class="skill">Android Studio</div>
+<div class="skill">IntelliJ IDEA</div>
 
 </div>
 
@@ -386,16 +485,31 @@ inventory and reporting for a milk tea shop.
 
 <!-- CONTACT -->
 
-<section class="contact">
+<section class="contact" id="contact">
 
 <h2>Contact</h2>
 
-<p>Email: anhkiet91112004@gmail.com</p>
-<p>Phone: 0949799072</p>
-<p>GitHub: github.com/AnhKiet20</p>
+<div class="contact-box">
+
+<p>Feel free to reach out for collaboration or internship opportunities.</p>
+
+<p>Email: <strong>anhkiet91112004@gmail.com</strong></p>
+
+<p>Phone: <strong>0949 799 072</strong></p>
+
+<div class="contact-links">
+
+<a href="mailto:anhkiet91112004@gmail.com">Email Me</a>
+
+<a href="https://github.com/AnhKiet20" target="_blank">
+GitHub
+</a>
+
+</div>
+
+</div>
 
 </section>
-
 
 
 <footer>
@@ -403,6 +517,7 @@ inventory and reporting for a milk tea shop.
 © 2026 Mai Anh Kiet
 
 </footer>
+
 
 </div>
 
